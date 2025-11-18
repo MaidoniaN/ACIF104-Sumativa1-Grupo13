@@ -65,25 +65,35 @@ El análisis de interpretabilidad reveló que el **Estado Civil** (específicame
 
 ## 💻 Instalación y Uso
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/MaidoniaN/TU_REPOSITORIO.git](https://github.com/MaidoniaN/TU_REPOSITORIO.git)
-    cd TU_REPOSITORIO
+### Ejecución en Google Colab
+
+Si prefieres ejecutar el proyecto en la nube sin instalar nada en tu equipo, sigue estos pasos:
+
+1.  **Abrir el Notebook:**
+    Sube el archivo `ACIF104_S6_Grupo13.ipynb` a tu Google Drive y ábrelo con Google Colab, o ábrelo directamente desde GitHub.
+
+2.  **Montar el Repositorio y Cargar el Dataset:**
+    Para asegurarte de que el notebook tenga acceso al archivo `adult.csv` y a todos los scripts, ejecuta el siguiente comando en la **primera celda** del notebook:
+
+    ```python
+    # Clona el repositorio dentro del entorno de Colab
+    !git clone [https://github.com/MaidoniaN/ACIF104-Sumativa1-Grupo1.git](https://github.com/MaidoniaN/ACIF104-Sumativa1-Grupo1.git)
+
+    # Cambia el directorio de trabajo a la carpeta del proyecto
+    %cd ACIF104-Sumativa1-Grupo1
+    ```
+    *Esto descargará automáticamente el dataset y los archivos necesarios.*
+
+3.  **Instalar Librerías:**
+    En una celda siguiente, ejecuta:
+    ```python
+    !pip install -r requirements.txt
     ```
 
-2.  **Crear un entorno virtual (opcional pero recomendado):**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # En Windows: venv\Scripts\activate
-    ```
+4.  **Ejecutar Paso a Paso:**
+    * Una vez configurado el entorno, ve al menú superior **"Entorno de ejecución"** -> **"Ejecutar todas"** para correr el proyecto completo.
+    * Alternativamente, presiona `Shift + Enter` en cada celda para ejecutar el análisis secuencialmente y ver los gráficos interactivos.
 
-3.  **Instalar dependencias:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Ejecutar el Notebook:**
-    Abre `Formativa_4_Sumativa1_Def.ipynb` en Jupyter Notebook, JupyterLab o Google Colab y ejecuta las celdas en orden secuencial.
 
 ## 📂 Estructura del Repositorio
 
