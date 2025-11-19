@@ -95,11 +95,54 @@ Si prefieres ejecutar el proyecto en la nube sin instalar nada en tu equipo, sig
     * Alternativamente, presiona `Shift + Enter` en cada celda para ejecutar el análisis secuencialmente y ver los gráficos interactivos.
 
 
+## 📱 Aplicación Web (Prototipo Funcional)
+
+Como parte de los requisitos de despliegue, se desarrolló un prototipo funcional utilizando **Streamlit**. Esta aplicación permite a un usuario interactuar con el modelo final, ingresar nuevos datos y obtener una predicción en tiempo real, junto con una explicación de la decisión.
+
+### Estructura de la App
+* **Backend:** Python + TensorFlow (Carga del modelo `MLP con Dropout`).
+* **Frontend:** Interfaz web reactiva construida con Streamlit.
+* **XAI:** Integración de gráficos **SHAP** para explicar cada predicción individualmente.
+* **Monitoreo:** Registro automático de todas las consultas en un archivo `prediction_logs.csv`.
+
+### ⚙️ Instrucciones para Ejecutar la App Localmente
+
+Debido a posibles diferencias de versiones entre Google Colab y entornos locales, se incluye un script de "re-entrenamiento ligero" (`entrenar_local.py`) que asegura que los objetos serializados (scalers, encoders) sean compatibles con tu PC.
+
+**1. Preparar el entorno:**
+Asegúrate de tener el archivo `adult.csv` en la carpeta `API` (o raíz).
+
+```bash
+# Crear y activar entorno virtual
+python3 -m venv venv
+source venv/bin/activate
+
+# Instalar librerías
+pip install streamlit pandas numpy tensorflow joblib shap matplotlib scikit-learn imbalanced-learn
+
+# Generar Artefactos Locales (Importante): Ejecuta este script para generar el modelo y los preprocesadores compatibles con tu sistema operativo:
+python3 entrenar_local.py
+
+# Lanzar la Aplicación:
+streamlit run app.py
+
+```
+
 ## 📂 Estructura del Repositorio
 
 ```text
-├── ACIF104_S6_Grupo13.ipynb         # Notebook principal con todo el código y análisis
-├── ACIF104_S6_Grupo13.pdf           # Informe de la actividad
-├── adult.csv                        # Dataset (si decides subirlo, o instruye descargarlo)
-├── requirements.txt                 # Lista de librerías necesarias
-└── README.md                        # Este archivo
+├── ACIF104_S6_Grupo13.ipynb    # Notebook principal con todo el análisis y modelado (Deep Learning)
+├── ACIF104_S6_Grupo13.pdf      # Informe final del proyecto (Evaluación Sumativa)
+├── requirements.txt            # Lista de dependencias y librerías necesarias
+├── README.md                   # Documentación del proyecto
+├── API/                        # Carpeta de la aplicación web
+│   ├── app.py                  # Código fuente de la aplicación Streamlit (Frontend + Backend)
+│   ├── adult.csv               # Dataset utilizado por el modelo y la app
+│   ├── entrenar_local.py       # Script auxiliar para generar modelos compatibles localmente
+│   ├── modelo_ingresos.keras   # Modelo de Red Neuronal entrenado
+│   ├── preprocessor.joblib     # Pipeline de preprocesamiento serializado
+│   ├── shap_background.joblib  # Datos de fondo para explicabilidad SHAP
+│   └── prediction_logs.csv     # Registro (log) de las predicciones realizadas
+└── ACIF104_S6_Grupo13.docx   # Documento editable del informe
+
+```
