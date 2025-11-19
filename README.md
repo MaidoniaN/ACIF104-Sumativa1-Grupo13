@@ -148,6 +148,5 @@ https://youtu.be/8H9rAWiT0Ok
 │   ├── preprocessor.joblib     # Pipeline de preprocesamiento serializado
 │   ├── shap_background.joblib  # Datos de fondo para explicabilidad SHAP
 │   └── prediction_logs.csv     # Registro (log) de las predicciones realizadas
-└── ACIF104_S6_Grupo13.docx   # Documento editable del informe
 
 ```
