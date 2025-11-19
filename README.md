@@ -130,6 +130,9 @@ streamlit run app.py
 ### API Corriendo
 ![API Corriendo](API/API_1.png)
 
+## Video de prueba de operacion.
+https://youtu.be/8H9rAWiT0Ok
+
 ## 📂 Estructura del Repositorio
 
 ```text
