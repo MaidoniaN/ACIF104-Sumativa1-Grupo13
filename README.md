@@ -1,5 +1,10 @@
-# ACIF104-Sumativa1-Grupo1
+# ACIF104-Sumativa1-Grupo13
 En este repositorio podran encontrar los elementos utilizados en el desarrollo de la actividad Sumativa 1, del curso Aprendizaje de Maquina APTRC106 de la Universidad Andrés Bello.
+
+# Integrantes
+- Alonso Cid Riveros
+- Scarlett Espinoza Contreras
+- Christian Mattioni Avila
 
 # 💰 Predicción de Ingresos con Deep Learning (Adult Census Dataset)
 
