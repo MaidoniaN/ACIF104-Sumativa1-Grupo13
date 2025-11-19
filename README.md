@@ -127,6 +127,8 @@ python3 entrenar_local.py
 streamlit run app.py
 
 ```
+### API Corriendo
+![API Corriendo](API/API_1.png)
 
 ## 📂 Estructura del Repositorio
 
